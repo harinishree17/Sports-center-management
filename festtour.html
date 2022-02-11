@@ -1,0 +1,182 @@
+<html>
+<head>
+<style>
+body{
+background-image: linear-gradient(#fad6a5, white);
+ font-family: Courier New;
+}
+button {
+  font-family: Courier New;
+  font-weight: heavy;
+  background-color: #000000;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 25%;
+  opacity:0.5;
+  align: center;
+}
+button:hover {
+  opacity: 0.5;
+}
+.close {
+  position: absolute;
+  right: 25px;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+.close:hover,
+.close:focus {
+  color: #fad6a5;
+  cursor: pointer;
+}
+
+
+* {
+  box-sizing: border-box;
+}
+
+input[type=text], input[type=password], input[type=email], input[type=tele] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  font-family: Courier New;
+}
+input[type=text]:focus, input[type=password]:focus, input[type=email]:focus, input[type=tele]:focus {
+  background-color: #ddd;
+  outline: none;
+  font-family: Courier New;
+}
+.modal {
+ 
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: #f2f2f2; 
+  background-color: #f2f2f2; 
+  padding-top: 50px;
+  font-family: Courier New;
+}
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto;
+  border: 1px solid #888;
+  width: 80%;
+  font-family: Courier New;
+}
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+3 animation: animatezoom 0.6s
+}
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)} 
+  to {-webkit-transform: scale(1)}
+} 
+@keyframes animatezoom {
+  from {transform: scale(0)} 
+  to {transform: scale(1)}
+}
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
+}
+.container1 {
+  padding: 16px;
+}
+.container { 
+  border-style: solid;
+  border-width: 5px;
+  position: absolute;
+  align: center;
+  right: 500px;
+  top: 16px;
+  margin: 20px;
+  max-width: 300px;
+  min-height: 330px;
+  padding: 30px;
+  background-color: #fad6a5; 
+  opacity:0.9;
+}
+
+.btn {
+  background-color: #000000;
+  color: white;
+  padding: 10px 10px;
+  border: 2;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+.btn:hover {
+  opacity: 1;
+}
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #000000;
+}
+</style>
+<body>
+<section class="container">
+<div class="modal">
+  
+  <input action="action" type="button" class="close" value="&times;" onclick="history.go(-1);" />
+ <form class="modal-content animate" action="tour-verification.php" method="post">
+    <div class="container1">
+      <h1>Tournament registration</h1>
+      <p>Please fill in this form to participate.</p>
+      <hr>
+
+      <label for="tour_email"><b>Email</b></label>
+      <input type="email" placeholder="Enter Email" name="tour_email" id="tour_email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
+
+      <label for="tour_pass"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="tour_pass" id="tour_pass" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
+      
+
+	<ul>
+<li>100 meters</li>
+<li>400 meters</li>
+<li>100*4 meters relay</li>
+<li>400*4 meters relay</li>
+<li>Cricket</li>
+<li>1Kho-kho</li>
+<li>Swimming</li>
+<li>Long jump</li>
+<li>Short put</li>
+<li>Archery</li>
+<li>Hand ball</li>
+<li>Foot ball</li>
+<li>Basket ball</li>
+<li>High jump</li>
+<li>Volley ball</li>
+      <label for="tour_game"><b>Game</b></label>
+      <input type="text" placeholder="Enter Game" name="tour_game" id="tour_game" required>
+      
+      <div class="clearfix">
+        
+        <center><button type="submit" class="button" onclick="alert('You were successfully registered')">Register</button></center>
+      </div>
+    </div>
+  </form>
+
+</div>
+<section>
+</body>
+</html>
